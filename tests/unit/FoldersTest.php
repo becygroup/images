@@ -6,7 +6,7 @@ class FolderMock extends \WebChemistry\Images\FileStorage\Image\Folders {
 
 	public function getLink() {}
 
-	public function save(Nette\Utils\Image $image, $imageType = NULL) {}
+	public function save(\BeCy\Image $image, $imageType = NULL) {}
 
 	public function saveUpload(Nette\Http\FileUpload $image, $imageType = NULL) {}
 

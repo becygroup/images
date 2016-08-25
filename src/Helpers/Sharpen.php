@@ -2,7 +2,7 @@
 
 namespace WebChemistry\Images\Helpers;
 
-use Nette\Utils\Image;
+use BeCy\Image;
 
 class Sharpen implements IHelper{
 

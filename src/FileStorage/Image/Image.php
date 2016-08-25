@@ -75,11 +75,11 @@ class Image extends Folders {
 	}
 
 	/**
-	 * @param Nette\Utils\Image $image
+	 * @param BeCy\Image $image
 	 * @param string $imageType
 	 * @throws ImageStorageException
 	 */
-	public function save(Nette\Utils\Image $image, $imageType = NULL) {
+	public function save(\BeCy\Image $image, $imageType = NULL) {
 		$this->createDirectories();
 
 		$image->save($this->getUploadPath(), $this->getQuality(), $imageType);

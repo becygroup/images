@@ -219,11 +219,11 @@ class UploadTest extends \Codeception\TestCase\Test {
 	public function testOnBeforeSave() {
 		$isCalled = FALSE;
 		$form = $this->sendRequestToPresenter('upload', TRUE, function (\Nette\Forms\Form $form) use (&$isCalled) {
-			$form['upload']->onBeforeSave[] = function (\Nette\Utils\Image $image) use (&$isCalled) {
+			$form['upload']->onBeforeSave[] = function (\BeCy\Image $image) use (&$isCalled) {
 				$isCalled = TRUE;
 
 				$image->resize(1,1);
-				
+
 				return $image;
 			};
 		});

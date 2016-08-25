@@ -16,7 +16,7 @@ class PropertyMock extends \WebChemistry\Images\Image\PropertyAccess {
 
 	public function isExists() {}
 
-	public function save(Nette\Utils\Image $image, $imageType = NULL) {}
+	public function save(\BeCy\Image $image, $imageType = NULL) {}
 
 	public function saveUpload(Nette\Http\FileUpload $image, $imageType = NULL) {}
 

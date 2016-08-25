@@ -2,7 +2,7 @@
 
 namespace WebChemistry\Images\FileStorage\Image;
 
-use Nette\Utils\Image;
+use BeCy\Image;
 use WebChemistry\Images\Image\PropertyAccess;
 use WebChemistry\Images\ImageStorageException;
 

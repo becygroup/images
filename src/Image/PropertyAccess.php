@@ -165,9 +165,9 @@ abstract class PropertyAccess extends Nette\Object {
 	}
 
 	/**
-	 * @param Nette\Utils\Image $image
+	 * @param BeCy\Image $image
 	 */
-	protected function processHelpers(Nette\Utils\Image $image) {
+	protected function processHelpers(\BeCy\Image $image) {
 		foreach ($this->useHelpers as $parameters) {
 			/** @var WebChemistry\Images\Helpers\IHelper $class */
 			list($class, $parameter) = $parameters;
@@ -537,7 +537,7 @@ abstract class PropertyAccess extends Nette\Object {
 	private function flagToInteger($flag) {
 		$flag = trim(Strings::upper($flag));
 
-		$value = @constant('Nette\Utils\Image::' . $flag);
+		$value = @constant('BeCy\Image::' . $flag);
 
 		if ($value === NULL) {
 			throw new WebChemistry\Images\ImageStorageException("WebChemistry\\Images: Flag '$flag' does not exist in Nette\\Utils\\Image.");
@@ -595,11 +595,11 @@ abstract class PropertyAccess extends Nette\Object {
 	abstract public function isExists();
 
 	/**
-	 * @param \Nette\Utils\Image $image
+	 * @param \BeCy\Image $image
 	 * @param int $imageType
 	 * @return PropertyAccess|static
 	 */
-	abstract public function save(Nette\Utils\Image $image, $imageType = NULL);
+	abstract public function save(\BeCy\Image $image, $imageType = NULL);
 
 	/**
 	 * @param Nette\Http\FileUpload $image
