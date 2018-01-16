@@ -22,7 +22,9 @@ class FileStorage extends AbstractStorage {
 	public function __construct($defaultImage, array $settings, Request $request) {
 		parent::__construct($defaultImage, $settings);
 		$this->basePath = $request->getUrl()->getBasePath();
-		$this->baseUri = $request->getUrl()->getBaseUrl();
+		$this->baseUri = $settings['baseUri'] === NULL
+			? $request->getUrl()->getBaseUrl()
+			: $settings['baseUri'];
 	}
 
 	/**

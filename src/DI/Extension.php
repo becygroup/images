@@ -23,7 +23,8 @@ class Extension extends Nette\DI\CompilerExtension {
 		'checkbox' => [
 			'caption' => NULL
 		],
-		'quality' => 85
+		'quality' => 85,
+		'baseUri' => NULL,
 	];
 
 	public function loadConfiguration() {
